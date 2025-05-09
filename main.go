@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/yikuanzz/go-blog/core"
+	"github.com/yikuanzz/go-blog/flag"
 	"github.com/yikuanzz/go-blog/global"
 	"github.com/yikuanzz/go-blog/initialize"
 )
@@ -53,6 +54,9 @@ func main() {
 
 	// 初始化定时任务
 	initialize.InitCron()
+
+	// 初始化 CLI
+	flag.InitFlag()
 
 	// 启动服务器
 	core.RunServer()
